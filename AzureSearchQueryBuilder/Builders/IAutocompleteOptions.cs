@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq.Expressions;
-using Microsoft.Azure.Search.Models;
+using Azure.Search.Documents;
+using Azure.Search.Documents.Models;
 
 namespace AzureSearchQueryBuilder.Builders
 {
@@ -73,7 +74,7 @@ namespace AzureSearchQueryBuilder.Builders
         /// Build an <typeparamref name="AutocompleteParameters"/> object.
         /// </summary>
         /// <returns>the <typeparamref name="AutocompleteParameters"/> object.</returns>
-        AutocompleteParameters Build();
+        AutocompleteOptions Build();
 
         /// <summary>
         /// Adds a where clause to the filter expression.
